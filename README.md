@@ -12,6 +12,11 @@ Before I touched any code, I mapped everything out in an ER-Modell.
 * **Relationship**: I used specific linking tables like *haben* to connect customers to accounts and *erstellt_in* to track which branch opened which account.
 * **Staffing** : I even added an *arbeiten_in* table to show which employees are assigned to which physical branch.
 
+I designed this ER-Modell to ensure the database follow **Third Normal Form (3NF)** standards, preventing data redundancy while maintaining high performance for a banking environment.
+* **Many-to-Many-Relationships**: I implemented the *haben* table to handle the complex of relationship where a customer can own multiple account, and an account can potentially have multiple owners (Joint Accounts).
+* **Service Tracking**: The *bedienen* table is a "Weak Entity" relationship that logs the intersection of Employees and Customer
+* **Separation of Concerns**:
+
 ## </> Breaking Down the Code
 The script (fadhali_bank_schema ) does all the heavy thing lifting— from setting up the structure to filling it withmassive amount of test data.
 
