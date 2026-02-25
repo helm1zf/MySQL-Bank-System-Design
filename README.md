@@ -8,7 +8,7 @@ This project is complete SQL implementation of a retail banking system called **
 
 ## 🫆 The Blueprint (ER-Modell)
 Before I touched any code, I mapped everything out in an ER-Modell to ensure the database follows **Third Normal Form (3NF)** standards, preventing data redundancy while maintaining high performance for a banking environment.
-![ER Model of Fadhali Bank](./ER_Model.jpeg)
+![ER Model of Fadhali Bank](./ER_MODEL.jpeg)
 
 * **The Logic**: It's not just a list of names; it's a web of how people, accounts, and staff actually interact.
 * **Relationship**: I used specific linking tables like **haben** to connect customers to accounts and **erstellt_in** to track which branch opened which account.
