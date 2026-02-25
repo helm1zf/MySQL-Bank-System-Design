@@ -8,7 +8,7 @@ This project is complete SQL implementation of a retail banking system called **
 
 ## 🫆 The Blueprint (ER-Modell)
 Before I touched any code, I mapped everything out in an ER-Modell to ensure the database follows **Third Normal Form (3NF)** standards, preventing data redundancy while maintaining high performance for a banking environment.
-**Here Photo**
+![ER Model of Fadhali Bank](./ER_Model.jpeg)
 
 * **The Logic**: It's not just a list of names; it's a web of how people, accounts, and staff actually interact.
 * **Relationship**: I used specific linking tables like **haben** to connect customers to accounts and **erstellt_in** to track which branch opened which account.
@@ -17,18 +17,18 @@ Before I touched any code, I mapped everything out in an ER-Modell to ensure the
 * **Separation of Concerns**: I kept internal accounts and external banking data (unbekannte_bank) separate. This ensure that the bank can track outgoing transfers to other institutions without mixing external data into our own internal account logic.
 
 ## </> Breaking Down the Code
-The script *fadhali_bank_schema.sql* does all the heavy thing lifting— from setting up the structure to filling it withmassive amount of test data.
+The script *fadhali_bank_schema.sql* does all the heavy thing lifting— from setting up the structure to filling it with massive amount of test data.
 
 ### Structure and Constraint
 I didnt just use standard settings. I added specific rules to keep the data clean:
-* **Professional IDs**: I used *AUTO_INCREMENT* but set them to start at realistic numbers. For example, Customer start at 1001, Branches at 9002001 and Employees at 1000001
+* **Professional IDs**: I used *AUTO_INCREMENT* but set them to start at realistic numbers. For example, Customer start at 1001, Branches at 9002001 and Employees at 10000001
 * **Safety Checks**: The **bankkonto** Table has built-in checks to make sure you only enter valid account types like "Saving" or "Giro" and valid statuses like "Active" or "Suspended".
 * **Cleanup**: I used *ON DELETE CASCADE* in tables like **aufnehmen** and **arbeiten_in**, so if a record is deleted, the database cleans itself up automatically.
 
 ### The Transaction Ledger (*überweisen*)
 This is my favorite part of the code. It's full log of every transaction. I filled it with real-world scenarios.
 * **Regular stuff**: You'll see transfers for rent (Wohnmiete) and salaries (Gehalt)
-* **The *Doner* Test**: I added small transaction for a "Döner Box" and set the status to abgelehnt (rejected) just to show how the system handles a failed payment.
+* **The *Doner* Test**: I added small transaction for a "Doner Box" and set the status to abgelehnt (rejected) just to show how the system handles a failed payment.
 
 ### The Dataset
 To make sure the queries actually return interesting results, I manually added:
@@ -49,6 +49,6 @@ I wrote a set of complex SQL queries to simulate the kind of reports a real bank
 ### 📂 Repository Contents
 * *fadhali_bank_schema.sql*: Main script for database structure and data.
 * *queries_fadhali_bank_schema.sql*: Analytical business queries.
-* *ER_MODEL.pdf: The original ER-Modell blueprint.saa
+* *ER_MODEL.pdf: The original ER-Modell blueprint.
 
 
