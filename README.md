@@ -1,9 +1,10 @@
 # 🏦 Fadhali Bank: Full Relational Database Implementation
 This project started as a university assignment, but I ended up putting a lot of work into the details to make it feel like a real banking system. I didn't want just a couple of tables; I wanted a fully functional environment where you could actually track money moving around.
+
 **Presentation Grade: 1.7**| **Academic Bachelor Project** at Trier University of Applied Science
 
 ## 📖 Project Overview
-This project is complete SQL implementation of a retail banking system called **Fadhali Bank**. [cite_start] It covers everything from customer management and branch organization to complex financial transactions and loan tracking.
+This project is complete SQL implementation of a retail banking system called **Fadhali Bank**.[cite_start]It covers everything from customer management and branch organization to complex financial transactions and loan tracking.
 
 ## 🫆 The Blueprint (ER-Modell)
 Before I touched any code, I mapped everything out in an ER-Modell.
