@@ -49,6 +49,6 @@ I wrote a set of complex SQL queries to simulate the kind of reports a real bank
 ### 📂 Repository Contents
 * *fadhali_bank_schema.sql*: Main script for database structure and data.
 * *queries_fadhali_bank_schema.sql*: Analytical business queries.
-* *ER_MODEL.pdf: The original ER-Modell blueprint.
+* *ER_MODEL.jpeg*: The original ER-Modell blueprint.
 
 
